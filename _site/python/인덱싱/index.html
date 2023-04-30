@@ -1,4 +1,321 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-30T17:23:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">일단 해보자고</title><subtitle>Leo의 개발 블로그입니다.</subtitle><author><name>문성우(Leo Moon)</name></author><entry><title type="html">인덱싱과 자료 조작</title><link href="http://localhost:4000/python/%EC%9D%B8%EB%8D%B1%EC%8B%B1/" rel="alternate" type="text/html" title="인덱싱과 자료 조작" /><published>2023-04-30T00:00:00+09:00</published><updated>2023-04-30T00:00:00+09:00</updated><id>http://localhost:4000/python/%EC%9D%B8%EB%8D%B1%EC%8B%B1</id><content type="html" xml:base="http://localhost:4000/python/%EC%9D%B8%EB%8D%B1%EC%8B%B1/"><![CDATA[<p>행, 열 내 원하는 데이터에 접근하는 방법이 자료형마다 차이가 있어서 이를 중심으로 정리하고자 한다.</p>
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>인덱싱과 자료 조작 - 일단 해보자고</title>
+<meta name="description" content="행, 열 내 원하는 데이터에 접근하는 방법이 자료형마다 차이가 있어서 이를 중심으로 정리하고자 한다.">
+
+
+  <meta name="author" content="문성우(Leo Moon)">
+  
+  <meta property="article:author" content="문성우(Leo Moon)">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="일단 해보자고">
+<meta property="og:title" content="인덱싱과 자료 조작">
+<meta property="og:url" content="http://localhost:4000/python/%EC%9D%B8%EB%8D%B1%EC%8B%B1/">
+
+
+  <meta property="og:description" content="행, 열 내 원하는 데이터에 접근하는 방법이 자료형마다 차이가 있어서 이를 중심으로 정리하고자 한다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-04-30T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/python/%EC%9D%B8%EB%8D%B1%EC%8B%B1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Leo Moon",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="일단 해보자고 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          ⚠️ 현재 공사 중인 블로그입니다.
+          <span class="site-subtitle">by leo</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="">Python</a>
+            </li><li class="masthead__menu-item">
+              <a href="">Deep Learning</a>
+            </li><li class="masthead__menu-item">
+              <a href="">Projects</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/avatar.jpeg" alt="문성우(Leo Moon)" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">문성우(Leo Moon)</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>취준생입니다.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="leomoon7180@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/Leo-Moooon" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  
+
+  </div>
+
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="인덱싱과 자료 조작">
+    <meta itemprop="description" content="행, 열 내 원하는 데이터에 접근하는 방법이 자료형마다 차이가 있어서 이를 중심으로 정리하고자 한다.">
+    <meta itemprop="datePublished" content="2023-04-30T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/python/%EC%9D%B8%EB%8D%B1%EC%8B%B1/" class="u-url" itemprop="url">인덱싱과 자료 조작
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 페이지 목차</h4></header>
+              <ul class="toc__menu"><li><a href="#리스트list">리스트(List)</a><ul><li><a href="#값-변경">값 변경</a></li><li><a href="#값-삭제">값 삭제</a></li><li><a href="#값-삭제2">값 삭제2</a></li><li><a href="#값-추가1">값 추가1</a></li><li><a href="#특정-인덱스에-값-추가">특정 인덱스에 값 추가</a></li><li><a href="#정렬">정렬</a></li><li><a href="#순서-뒤집기">순서 뒤집기</a></li><li><a href="#특정-값의-인덱스-확인">특정 값의 인덱스 확인</a></li><li><a href="#값-추출">값 추출</a><ul><li><a href="#활용">활용</a></li></ul></li><li><a href="#특정-값의-개수-세기">특정 값의 개수 세기</a></li><li><a href="#리스트-병합">리스트 병합</a></li></ul></li><li><a href="#튜플tuple">튜플(Tuple)</a><ul><li><a href="#인덱싱">인덱싱</a></li><li><a href="#슬라이싱">슬라이싱</a></li><li><a href="#튜플-덧셈">튜플 덧셈</a></li><li><a href="#튜플-곱셈">튜플 곱셈</a></li><li><a href="#튜플을-리스트로-변환하기">튜플을 리스트로 변환하기</a></li></ul></li><li><a href="#딕셔너리dictionary">딕셔너리(Dictionary)</a><ul><li><a href="#특징">특징</a></li><li><a href="#값-추가-및-변경">값 추가 및 변경</a></li><li><a href="#값-삭제-1">값 삭제</a></li><li><a href="#값-존재여부-확인">값 존재여부 확인</a></li><li><a href="#key에-대응하는-value에-접근">Key에 대응하는 Value에 접근</a></li><li><a href="#key만-모아보기--리스트로-변환">Key만 모아보기 + 리스트로 변환</a></li><li><a href="#value만-보아보기--리스트로-변환">Value만 보아보기 + 리스트로 변환</a></li><li><a href="#key-value로-묶어서-보기--리스트로-변환">Key: Value로 묶어서 보기 + 리스트로 변환</a></li></ul></li><li><a href="#집합set">집합(Set)</a><ul><li><a href="#교집합">교집합</a></li><li><a href="#합집합">합집합</a></li><li><a href="#차집합">차집합</a></li><li><a href="#하나의-값-추가">하나의 값 추가</a></li><li><a href="#여러-값-추가">여러 값 추가</a></li><li><a href="#값-제거">값 제거</a></li><li><a href="#여러-값-제거">여러 값 제거</a></li></ul></li><li><a href="#시리즈pandasseries">시리즈(pandas.Series)</a><ul><li><a href="#리스트---시리즈-인덱스-이름-미지정">리스트 -&gt; 시리즈 (인덱스 이름 미지정)</a></li><li><a href="#리스트---시리즈-인덱스-이름-지정">리스트 -&gt; 시리즈 (인덱스 이름 지정)</a></li><li><a href="#시리즈---데이터프레임">시리즈 -&gt; 데이터프레임</a></li><li><a href="#시리즈-행-이름-확인">시리즈 행 이름 확인</a></li><li><a href="#시리즈-값-확인">시리즈 값 확인</a></li><li><a href="#시리즈-통계함수">시리즈 통계함수</a></li></ul></li><li><a href="#데이터프레임pandasdataframe">데이터프레임(pandas.DataFrame)</a><ul><li><a href="#열에-접근하기">열에 접근하기</a></li><li><a href="#행-열에-접근하기">행, 열에 접근하기</a></li><li><a href="#조건에-부합하는-행-추출하기">조건에 부합하는 행 추출하기</a></li><li><a href="#모양-정보-확인하기">모양, 정보 확인하기</a></li><li><a href="#시리즈-및-데이터프레임의-중복데이터-삭제하기">시리즈 및 데이터프레임의 중복데이터 삭제하기</a></li><li><a href="#시리즈-특정-값-바꾸기">시리즈 특정 값 바꾸기</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>행, 열 내 원하는 데이터에 접근하는 방법이 자료형마다 차이가 있어서 이를 중심으로 정리하고자 한다.</p>
 
 <h2 id="리스트list">리스트(List)</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list1 = ['1번', '2번', '3번', '4번']
@@ -737,94 +1054,246 @@ df.drop_duplicates()
       <td>f</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>문성우(Leo Moon)</name></author><category term="Python" /><category term="인덱싱" /><category term="list" /><category term="dictionary" /><category term="DataFrame" /><summary type="html"><![CDATA[행, 열 내 원하는 데이터에 접근하는 방법이 자료형마다 차이가 있어서 이를 중심으로 정리하고자 한다.]]></summary></entry><entry><title type="html">Edge Case: Post with multiline excerpt</title><link href="http://localhost:4000/projects/edge-case-multiline-excerpt/" rel="alternate" type="text/html" title="Edge Case: Post with multiline excerpt" /><published>2009-10-05T00:00:00+09:00</published><updated>2009-10-05T00:00:00+09:00</updated><id>http://localhost:4000/projects/edge-case-multiline-excerpt</id><content type="html" xml:base="http://localhost:4000/projects/edge-case-multiline-excerpt/"><![CDATA[<p>Et ex ullamco duis don’t
-combine these words quis laborum sunt sint. Nisi et Lorem reprehenderit cupidatat. Aliqua fugiat aliquip officia culpa elit. Adipisicing do eu duis aute et aute amet anim ut cillum aliqua. Aliqua adipisicing occaecat et ullamco fugiat.</p>]]></content><author><name>문성우(Leo Moon)</name></author><category term="Projects" /><summary type="html"><![CDATA[Et ex ullamco duis don’t combine these words quis laborum sunt sint. Nisi et Lorem reprehenderit cupidatat. Aliqua fugiat aliquip officia culpa elit. Adipisicing do eu duis aute et aute amet anim ut cillum aliqua. Aliqua adipisicing occaecat et ullamco fugiat.]]></summary></entry><entry><title type="html">Edge Case: Nested and Mixed Lists</title><link href="http://localhost:4000/deep%20learning/edge-case-nested-and-mixed-lists/" rel="alternate" type="text/html" title="Edge Case: Nested and Mixed Lists" /><published>2009-05-15T00:00:00+09:00</published><updated>2009-05-15T00:00:00+09:00</updated><id>http://localhost:4000/deep%20learning/edge-case-nested-and-mixed-lists</id><content type="html" xml:base="http://localhost:4000/deep%20learning/edge-case-nested-and-mixed-lists/"><![CDATA[<p>Nested and mixed lists are an interesting beast. It’s a corner case to make sure that</p>
+</table>
 
-<ul>
-  <li>Lists within lists do not break the ordered list numbering order</li>
-  <li>Your list styles go deep enough.</li>
-</ul>
 
-<h3 id="ordered--unordered--ordered">Ordered – Unordered – Ordered</h3>
+        
+      </section>
 
-<ol>
-  <li>ordered item</li>
-  <li>ordered item
-    <ul>
-      <li><strong>unordered</strong></li>
-      <li><strong>unordered</strong>
-        <ol>
-          <li>ordered item</li>
-          <li>ordered item</li>
-        </ol>
-      </li>
-    </ul>
-  </li>
-  <li>ordered item</li>
-  <li>ordered item</li>
-</ol>
+      <footer class="page__meta">
+        
+        
+  
 
-<h3 id="ordered--unordered--unordered">Ordered – Unordered – Unordered</h3>
 
-<ol>
-  <li>ordered item</li>
-  <li>ordered item
-    <ul>
-      <li><strong>unordered</strong></li>
-      <li><strong>unordered</strong>
-        <ul>
-          <li>unordered item</li>
-          <li>unordered item</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>ordered item</li>
-  <li>ordered item</li>
-</ol>
+  
 
-<h3 id="unordered--ordered--unordered">Unordered – Ordered – Unordered</h3>
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#dataframe" class="page__taxonomy-item p-category" rel="tag">DataFrame</a><span class="sep">, </span>
+    
+      <a href="/tags/#dictionary" class="page__taxonomy-item p-category" rel="tag">dictionary</a><span class="sep">, </span>
+    
+      <a href="/tags/#list" class="page__taxonomy-item p-category" rel="tag">list</a><span class="sep">, </span>
+    
+      <a href="/tags/#%EC%9D%B8%EB%8D%B1%EC%8B%B1" class="page__taxonomy-item p-category" rel="tag">인덱싱</a>
+    
+    </span>
+  </p>
 
-<ul>
-  <li>unordered item</li>
-  <li>unordered item
-    <ol>
-      <li>ordered</li>
-      <li>ordered
-        <ul>
-          <li>unordered item</li>
-          <li>unordered item</li>
-        </ul>
-      </li>
-    </ol>
-  </li>
-  <li>unordered item</li>
-  <li>unordered item</li>
-</ul>
 
-<h3 id="unordered--unordered--ordered">Unordered – Unordered – Ordered</h3>
 
-<ul>
-  <li>unordered item</li>
-  <li>unordered item
-    <ul>
-      <li>unordered</li>
-      <li>unordered
-        <ol>
-          <li><strong>ordered item</strong></li>
-          <li><strong>ordered item</strong></li>
-        </ol>
-      </li>
-    </ul>
-  </li>
-  <li>unordered item</li>
-  <li>unordered item</li>
-</ul>
 
-<h3 id="task-lists">Task Lists</h3>
+  
 
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Finish my changes</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Push my commits to GitHub</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Open a pull request</li>
-</ul>]]></content><author><name>문성우(Leo Moon)</name></author><category term="Deep Learning" /><category term="content" /><category term="css" /><category term="edge case" /><category term="lists" /><category term="markup" /><summary type="html"><![CDATA[Nested and mixed lists are an interesting beast. It’s a corner case to make sure that]]></summary></entry></feed>
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#python" class="page__taxonomy-item p-category" rel="tag">Python</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-04-30T00:00:00+09:00">April 30, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EC%9D%B8%EB%8D%B1%EC%8B%B1%EA%B3%BC+%EC%9E%90%EB%A3%8C+%EC%A1%B0%EC%9E%91%20http%3A%2F%2Flocalhost%3A4000%2Fpython%2F%25EC%259D%25B8%25EB%258D%25B1%25EC%258B%25B1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fpython%2F%25EC%259D%25B8%25EB%258D%25B1%25EC%258B%25B1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fpython%2F%25EC%259D%25B8%25EB%258D%25B1%25EC%258B%25B1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/edge-case-multiline-excerpt/" class="pagination--pager" title="Edge Case: Post with multiline excerpt
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/projects/edge-case-multiline-excerpt/" rel="permalink">Edge Case: Post with multiline excerpt
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Et ex ullamco duis don’t
+combine these words quis laborum sunt sint. Nisi et Lorem reprehenderit cupidatat. Aliqua fugiat aliquip officia culpa elit. Adipisi...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/deep%20learning/edge-case-nested-and-mixed-lists/" rel="permalink">Edge Case: Nested and Mixed Lists
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Nested and mixed lists are an interesting beast. It’s a corner case to make sure that
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/Leo-Moooon" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Leo Moon. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

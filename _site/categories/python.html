@@ -1,0 +1,574 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Python - 일단 해보자고</title>
+<meta name="description" content="Leo의 개발 블로그입니다.">
+
+
+  <meta name="author" content="문성우(Leo Moon)">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="일단 해보자고">
+<meta property="og:title" content="Python">
+<meta property="og:url" content="http://localhost:4000/categories/python">
+
+
+  <meta property="og:description" content="Leo의 개발 블로그입니다.">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/categories/python">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Leo Moon",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="일단 해보자고 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--archive">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          ⚠️ 현재 공사 중인 블로그입니다.
+          <span class="site-subtitle">by leo</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="">Python</a>
+            </li><li class="masthead__menu-item">
+              <a href="">Deep Learning</a>
+            </li><li class="masthead__menu-item">
+              <a href="">Projects</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/avatar.jpeg" alt="문성우(Leo Moon)" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">문성우(Leo Moon)</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>취준생입니다.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="leomoon7180@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/Leo-Moooon" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  
+<!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <li>
+            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">3</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
+      </li>
+      <li>
+        <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
+
+        <span class="nav__sub-title">Python</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Python 카테고리 글들을 모아둔 페이지인 /categories/python 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+                    
+                
+                    
+                        <li><a href="/categories/python" class="">Python (1)</a></li>
+                    
+                
+                    
+                
+            </ul>
+           
+
+
+        <span class="nav__sub-title">Deep Learning</span>
+           <ul>
+                
+                    
+                        <li><a href="/categories/Deep-Learning" class="">Deep Learning ()</a></li>
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+      </li>
+  </ul>
+</nav>
+
+
+  </div>
+
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Python</h1>
+    
+    
+<div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/python/edge-case-many-tags/">Edge Case: Many Tags</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2009.06.01
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#python" class="page__taxonomy-item-category" rel="tag">Python</a>
+                    
+                    
+                    <a href="/tags/#8bit" class="page__taxonomy-item-tag" rel="tag">8BIT</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#alignment" class="page__taxonomy-item-tag" rel="tag">alignment</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#articles" class="page__taxonomy-item-tag" rel="tag">Articles</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#captions" class="page__taxonomy-item-tag" rel="tag">captions</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#categories" class="page__taxonomy-item-tag" rel="tag">categories</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#chat" class="page__taxonomy-item-tag" rel="tag">chat</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#comments" class="page__taxonomy-item-tag" rel="tag">comments</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#content" class="page__taxonomy-item-tag" rel="tag">content</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#css" class="page__taxonomy-item-tag" rel="tag">css</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#dowork" class="page__taxonomy-item-tag" rel="tag">dowork</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#edge-case" class="page__taxonomy-item-tag" rel="tag">edge case</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#embeds" class="page__taxonomy-item-tag" rel="tag">embeds</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#excerpt" class="page__taxonomy-item-tag" rel="tag">excerpt</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#fail" class="page__taxonomy-item-tag" rel="tag">Fail</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#featured-image" class="page__taxonomy-item-tag" rel="tag">featured image</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#ftw" class="page__taxonomy-item-tag" rel="tag">FTW</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#fun" class="page__taxonomy-item-tag" rel="tag">Fun</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#gallery" class="page__taxonomy-item-tag" rel="tag">gallery</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#html" class="page__taxonomy-item-tag" rel="tag">html</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#image" class="page__taxonomy-item-tag" rel="tag">image</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#jekyll" class="page__taxonomy-item-tag" rel="tag">Jekyll</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#layout" class="page__taxonomy-item-tag" rel="tag">layout</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#link" class="page__taxonomy-item-tag" rel="tag">link</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#love" class="page__taxonomy-item-tag" rel="tag">Love</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#markup" class="page__taxonomy-item-tag" rel="tag">markup</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#mothership" class="page__taxonomy-item-tag" rel="tag">Mothership</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#must-read" class="page__taxonomy-item-tag" rel="tag">Must Read</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#nailed-it" class="page__taxonomy-item-tag" rel="tag">Nailed It</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#pictures" class="page__taxonomy-item-tag" rel="tag">Pictures</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#post-formats" class="page__taxonomy-item-tag" rel="tag">Post Formats</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#quote" class="page__taxonomy-item-tag" rel="tag">quote</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#standard" class="page__taxonomy-item-tag" rel="tag">standard</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#success" class="page__taxonomy-item-tag" rel="tag">Success</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#swagger" class="page__taxonomy-item-tag" rel="tag">Swagger</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#tags" class="page__taxonomy-item-tag" rel="tag">Tags</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#template" class="page__taxonomy-item-tag" rel="tag">template</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#title" class="page__taxonomy-item-tag" rel="tag">title</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#twitter" class="page__taxonomy-item-tag" rel="tag">twitter</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#unseen" class="page__taxonomy-item-tag" rel="tag">Unseen</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#video" class="page__taxonomy-item-tag" rel="tag">video</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#youtube" class="page__taxonomy-item-tag" rel="tag">YouTube</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+
+
+  </div>
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/Leo-Moooon" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Leo Moon. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

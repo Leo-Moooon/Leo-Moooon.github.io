@@ -1,1 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-30T10:58:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Site Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-30T12:55:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">일단 해보자고</title><subtitle>Leo의 개발 블로그입니다.</subtitle><author><name>문성우(Leo Moon)</name></author><entry><title type="html">Edge Case: Post with multiline excerpt</title><link href="http://localhost:4000/projects/edge-case-multiline-excerpt/" rel="alternate" type="text/html" title="Edge Case: Post with multiline excerpt" /><published>2009-10-05T00:00:00+09:00</published><updated>2009-10-05T00:00:00+09:00</updated><id>http://localhost:4000/projects/edge-case-multiline-excerpt</id><content type="html" xml:base="http://localhost:4000/projects/edge-case-multiline-excerpt/"><![CDATA[<p>Et ex ullamco duis don’t
+combine these words quis laborum sunt sint. Nisi et Lorem reprehenderit cupidatat. Aliqua fugiat aliquip officia culpa elit. Adipisicing do eu duis aute et aute amet anim ut cillum aliqua. Aliqua adipisicing occaecat et ullamco fugiat.</p>]]></content><author><name>문성우(Leo Moon)</name></author><category term="Projects" /><summary type="html"><![CDATA[Et ex ullamco duis don’t combine these words quis laborum sunt sint. Nisi et Lorem reprehenderit cupidatat. Aliqua fugiat aliquip officia culpa elit. Adipisicing do eu duis aute et aute amet anim ut cillum aliqua. Aliqua adipisicing occaecat et ullamco fugiat.]]></summary></entry><entry><title type="html">Edge Case: Many Tags</title><link href="http://localhost:4000/python/edge-case-many-tags/" rel="alternate" type="text/html" title="Edge Case: Many Tags" /><published>2009-06-01T00:00:00+09:00</published><updated>2009-06-01T00:00:00+09:00</updated><id>http://localhost:4000/python/edge-case-many-tags</id><content type="html" xml:base="http://localhost:4000/python/edge-case-many-tags/"><![CDATA[<p>This post has many tags.</p>]]></content><author><name>문성우(Leo Moon)</name></author><category term="Python" /><category term="8BIT" /><category term="alignment" /><category term="Articles" /><category term="captions" /><category term="categories" /><category term="chat" /><category term="comments" /><category term="content" /><category term="css" /><category term="dowork" /><category term="edge case" /><category term="embeds" /><category term="excerpt" /><category term="Fail" /><category term="featured image" /><category term="FTW" /><category term="Fun" /><category term="gallery" /><category term="html" /><category term="image" /><category term="Jekyll" /><category term="layout" /><category term="link" /><category term="Love" /><category term="markup" /><category term="Mothership" /><category term="Must Read" /><category term="Nailed It" /><category term="Pictures" /><category term="Post Formats" /><category term="quote" /><category term="standard" /><category term="Success" /><category term="Swagger" /><category term="Tags" /><category term="template" /><category term="title" /><category term="twitter" /><category term="Unseen" /><category term="video" /><category term="YouTube" /><summary type="html"><![CDATA[This post has many tags.]]></summary></entry><entry><title type="html">Edge Case: Nested and Mixed Lists</title><link href="http://localhost:4000/deep%20learning/edge-case-nested-and-mixed-lists/" rel="alternate" type="text/html" title="Edge Case: Nested and Mixed Lists" /><published>2009-05-15T00:00:00+09:00</published><updated>2009-05-15T00:00:00+09:00</updated><id>http://localhost:4000/deep%20learning/edge-case-nested-and-mixed-lists</id><content type="html" xml:base="http://localhost:4000/deep%20learning/edge-case-nested-and-mixed-lists/"><![CDATA[<p>Nested and mixed lists are an interesting beast. It’s a corner case to make sure that</p>
+
+<ul>
+  <li>Lists within lists do not break the ordered list numbering order</li>
+  <li>Your list styles go deep enough.</li>
+</ul>
+
+<h3 id="ordered--unordered--ordered">Ordered – Unordered – Ordered</h3>
+
+<ol>
+  <li>ordered item</li>
+  <li>ordered item
+    <ul>
+      <li><strong>unordered</strong></li>
+      <li><strong>unordered</strong>
+        <ol>
+          <li>ordered item</li>
+          <li>ordered item</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>ordered item</li>
+  <li>ordered item</li>
+</ol>
+
+<h3 id="ordered--unordered--unordered">Ordered – Unordered – Unordered</h3>
+
+<ol>
+  <li>ordered item</li>
+  <li>ordered item
+    <ul>
+      <li><strong>unordered</strong></li>
+      <li><strong>unordered</strong>
+        <ul>
+          <li>unordered item</li>
+          <li>unordered item</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>ordered item</li>
+  <li>ordered item</li>
+</ol>
+
+<h3 id="unordered--ordered--unordered">Unordered – Ordered – Unordered</h3>
+
+<ul>
+  <li>unordered item</li>
+  <li>unordered item
+    <ol>
+      <li>ordered</li>
+      <li>ordered
+        <ul>
+          <li>unordered item</li>
+          <li>unordered item</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>unordered item</li>
+  <li>unordered item</li>
+</ul>
+
+<h3 id="unordered--unordered--ordered">Unordered – Unordered – Ordered</h3>
+
+<ul>
+  <li>unordered item</li>
+  <li>unordered item
+    <ul>
+      <li>unordered</li>
+      <li>unordered
+        <ol>
+          <li><strong>ordered item</strong></li>
+          <li><strong>ordered item</strong></li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>unordered item</li>
+  <li>unordered item</li>
+</ul>
+
+<h3 id="task-lists">Task Lists</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Finish my changes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Push my commits to GitHub</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Open a pull request</li>
+</ul>]]></content><author><name>문성우(Leo Moon)</name></author><category term="Deep Learning" /><category term="content" /><category term="css" /><category term="edge case" /><category term="lists" /><category term="markup" /><summary type="html"><![CDATA[Nested and mixed lists are an interesting beast. It’s a corner case to make sure that]]></summary></entry></feed>
